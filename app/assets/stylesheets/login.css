@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/* #sessions-login -------------------------------------------- */
+#sessions h2 { border:none; }
+#sessions-recommend { width: 345px; padding-top:10px; }
+#sessions-others { width: 345px; padding-top:10px; }
+
+#sessions ul li a img { text-decoration: none; }
+#sessions ul li img { padding-right:5px; vertical-align: middle; }
+#sessions ul li label:hover { color:#EA1F00; }
+
+#sessions-recommend ul li { margin-bottom:15px; }
+#sessions-recommend ul li a { display: block; padding:20px; text-align: center; border:1px solid #757575; }
+#sessions-recommend ul li a span { text-decoration: underline; }
+#sessions-recommend ul li a:hover { border:1px solid #EA1F00; }
+#sessions-others ul li a, #sessions-others ul li label { text-decoration: underline; }
+#sessions-others ul li { margin-bottom:8px; }
+#sessions-others ul li div { padding:10px 0px 15px; }
+#sessions-others ul li div p { padding-bottom:10px; color:#757575; font-size:0.9em; }
+#sessions-others ul li .input-text { margin-top:2px; font-size:100%; line-height:1em; width:120px; padding:3px; }
+                                                                                                                   
+
+ul { margin-left:1.5em; }
+ul.ln { list-style: none; margin:0px; padding:0px; }
