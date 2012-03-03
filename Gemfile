@@ -22,7 +22,9 @@ end
 
 gem 'jquery-rails' 
 
-gem 'oauth'
+gem 'omniauth'
+gem 'omniauth-twitter'
+#gem 'oauth'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -37,4 +39,4 @@ gem 'oauth'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'ruby-debug19', :require => 'ruby-debug'

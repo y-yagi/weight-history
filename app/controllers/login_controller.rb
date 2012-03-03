@@ -16,7 +16,7 @@ class LoginController < ApplicationController
     # :oauth_callbackに認証後のコールバックURLを指定
     # この場合だとこのコントローラー内の oauth_callback メソッドが実行される
     request_token = LoginController.consumer.get_request_token(
-      :oauth_callback => "http://#{request.host_with_port}/oauth_callback"
+      :oauth_callback => "http://#{request.host_with_port}/history"
     )
     session[:request_token] = request_token.token
     session[:request_token_secret] = request_token.secret
