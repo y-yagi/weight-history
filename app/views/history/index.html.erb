@@ -22,7 +22,53 @@
     <![endif]-->
 
     <!-- Le javascript -->
-    <%= javascript_include_tag "application" %> 
+    <%= javascript_include_tag "application" %>  
+
+		<script type="text/javascript"> 
+$(document).ready ( function () {
+  $.ajax({
+url : "/history/data",
+type : "get",
+datatype: "script",
+success : function(data){
+alert("success");
+alert(data);
+},
+error : function(){
+alert("読み込めませんでした");
+} , 
+timeout : 3
+});
+
+	//$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+//	$.get('/history/data?callback=?', function(data) {
+//		// Create the chart 
+//		window.chart = new Highcharts.StockChart({
+//			chart : {
+//				renderTo : 'graph'
+//			},
+//
+//			rangeSelector : {
+//				selected : 1
+//			},
+//
+//			title : {
+//				text : 'AAPL Stock Price'
+//			},
+//			
+//			series : [{
+//				name : 'AAPL',
+//				data : data,
+//				tooltip: {
+//					yDecimals: 2
+//				}
+//			}]
+//		});
+//	});
+
+});
+
+		</script>
 
     <!-- Le fav and touch icons --> 
 
@@ -57,25 +103,8 @@
       </div>
     </div>
 
-    <div class="container">
 
-      <h1>Weight History</h1>
-      <p>体重の変動を表示します </p>
-      <h3>Login</h3>
-      <br />
-      <p>
-      twitterのアカウントでのみログインできます。
-      </p> 
-      <section id="sessions-recommend" class="left" style="">
-		     <ul class="ln">
-			   <li><a href="/auth/twitter" style=""><img src="assets/twitter.gif" alt="Twitter"><span>Twitterでログイン</span></a></li>
-		     </ul>
-         </section>
-      <br /><br />
-      <p>
-      使い方は<a href="/help.html" target="_blank">こちら</a><br />
-    </div> <!-- /container -->
-
+    <div id="graph" style="height: 500px; min-width: 500px"></div>
 
   </body>
 </html>

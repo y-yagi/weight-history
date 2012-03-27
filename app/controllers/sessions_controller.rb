@@ -6,7 +6,8 @@ class SessionsController < ApplicationController
             auth["uid"]) || User.create_with_omniauth(auth)
 
     session[:user_id] = user.id
-    redirect_to root_url, :notice => "login" 
+    session[:name] = user.name
+    redirect_to :history, :notice => "login" 
   end  
 
   def destroy

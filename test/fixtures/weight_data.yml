@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uid: MyString
+  name: MyString
+  weight: 1.5
+  body_fat_percentageinitial: 1.5
+  regist_date: 2012-03-20
+
+two:
+  uid: MyString
+  name: MyString
+  weight: 1.5
+  body_fat_percentageinitial: 1.5
+  regist_date: 2012-03-20
