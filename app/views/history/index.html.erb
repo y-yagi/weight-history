@@ -25,48 +25,39 @@
     <%= javascript_include_tag "application" %>  
 
 		<script type="text/javascript"> 
-$(document).ready ( function () {
-  $.ajax({
-url : "/history/data",
-type : "get",
-datatype: "script",
-success : function(data){
-alert("success");
-alert(data);
-},
-error : function(){
-alert("読み込めませんでした");
-} , 
-timeout : 3
-});
 
-	//$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
-//	$.get('/history/data?callback=?', function(data) {
-//		// Create the chart 
-//		window.chart = new Highcharts.StockChart({
-//			chart : {
-//				renderTo : 'graph'
-//			},
-//
-//			rangeSelector : {
-//				selected : 1
-//			},
-//
-//			title : {
-//				text : 'AAPL Stock Price'
-//			},
-//			
-//			series : [{
-//				name : 'AAPL',
-//				data : data,
-//				tooltip: {
-//					yDecimals: 2
-//				}
-//			}]
-//		});
-//	});
+//	$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
+	$.get('/history/data.json?callback=?', function(data) {
+		// Create the chart 
+		window.chart = new Highcharts.Chart({
+			chart : {
+				renderTo : 'graph'
+			},
 
-});
+			rangeSelector : {
+				selected : 1
+			}, 
+
+			global : {
+				useUTC : false
+			},
+
+			title : {
+				text : 'weight history'
+			},
+      xAxis: {
+        type: 'datetime'
+      },
+			
+			series : [{
+				name : 'date',
+				data : data,
+				tooltip: {
+					yDecimals: 2
+				}
+			}]
+		});
+	});
 
 		</script>
 

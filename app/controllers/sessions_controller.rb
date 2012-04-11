@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     session[:user_id] = user.id
     session[:name] = user.name
-    redirect_to :history, :notice => "login" 
+    redirect_to '/history'
   end  
 
   def destroy

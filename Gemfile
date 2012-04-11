@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.0'
+gem 'rails', '3.2.0' 
+
+gem 'linecache19', '0.5.13', :path => "~/.rvm/gems/ruby-1.9.3-p125/gems/linecache19-0.5.13/"
+gem 'ruby-debug-base19', '0.11.26', :path => "~/.rvm/gems/ruby-1.9.3-p125/gems/ruby-debug-base19-0.11.26/" 
+gem 'ruby-debug19', :require => 'ruby-debug'
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -34,12 +39,9 @@ gem 'omniauth-twitter'
 
 # Use unicorn as the web server
 # gem 'unicorn'
-
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-#gem 'ruby-debug19', :require => 'ruby-debug' 
 
 gem 'execjs'
-gem 'therubyracer'
+gem 'therubyracer' 

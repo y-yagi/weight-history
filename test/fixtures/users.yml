@@ -7,7 +7,7 @@ one:
   name: MyString
   initial_weight: 1.5
   initial_body_fat_percentageinitial: 1.5
-  regist_date: 2012-03-20
+  regist_date: 2012-04-06
 
 two:
   provider: MyString
@@ -16,4 +16,4 @@ two:
   name: MyString
   initial_weight: 1.5
   initial_body_fat_percentageinitial: 1.5
-  regist_date: 2012-03-20
+  regist_date: 2012-04-06
