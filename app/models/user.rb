@@ -4,8 +4,6 @@ class User < ActiveRecord::Base
       user.provider = auth["provider"]
       user.uid = auth["uid"]  
       user.name = auth["info"]["nickname"] 
-      debugger
-      user.screen_name = auth["info"]["nickname"] 
     end 
   end
 end

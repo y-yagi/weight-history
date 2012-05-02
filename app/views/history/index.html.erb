@@ -25,36 +25,90 @@
     <%= javascript_include_tag "application" %>  
 
 		<script type="text/javascript"> 
-
-//	$.getJSON('http://www.highcharts.com/samples/data/jsonp.php?filename=aapl-c.json&callback=?', function(data) {
 	$.get('/history/data.json?callback=?', function(data) {
-		// Create the chart 
+		// Create the chart  
+    Highcharts.setOptions({
+      global: {
+        useUTC: false
+      }
+    }); 
 		window.chart = new Highcharts.Chart({
 			chart : {
-				renderTo : 'graph'
+				renderTo : 'graph-weight'
 			},
 
 			rangeSelector : {
 				selected : 1
 			}, 
 
-			global : {
-				useUTC : false
-			},
-
 			title : {
 				text : 'weight history'
-			},
+			}, 
+
       xAxis: {
-        type: 'datetime'
-      },
-			
-			series : [{
-				name : 'date',
-				data : data,
-				tooltip: {
+        type: 'datetime', 
+        dateTimeLabelFormats: {
+        	day: '%m-%d',
+	        week: '%m-%d'
+        },
+			  title: {
+				  text: 'date'
+        }
+      }, 
+		  yAxis: {
+			  title: {
+				  text: 'weight'
+        }
+			},   
+      tooltip: {
+          xDateFormat: '%Y-%m-%d',
+          shared: true,
 					yDecimals: 2
-				}
+      },
+
+			series : [{
+				name : 'weight data',
+				data : data["weight"]
+			}]
+		}); 
+
+		window.chart = new Highcharts.Chart({
+			chart : {
+				renderTo : 'graph-body-fat'
+			},
+
+			rangeSelector : {
+				selected : 1
+			}, 
+
+			title : {
+				text : 'body fat percentage history'
+			}, 
+
+      xAxis: {
+        type: 'datetime', 
+        dateTimeLabelFormats: {
+        	day: '%m-%d',
+	        week: '%m-%d'
+        },
+			  title: {
+				  text: 'date'
+        }
+      }, 
+		  yAxis: {
+			  title: {
+				  text: 'body fat percentage'
+        }
+			},   
+      tooltip: {
+          xDateFormat: '%Y-%m-%d',
+          shared: true,
+					yDecimals: 2
+      },
+
+			series : [{
+				name : 'body fat percentage data',
+				data : data['body_fat_percentage']
 			}]
 		});
 	});
@@ -94,8 +148,9 @@
       </div>
     </div>
 
-
-    <div id="graph" style="height: 500px; min-width: 500px"></div>
+    <div id="graph-weight" style="height: 350px; min-width: 500px"><div align="center"><img src="assets/ajax-loader.gif" alt="loading..."/></div></div>
+    <br /><br />
+    <div id="graph-body-fat" style="height: 350px; min-width: 500px"><div align="center"><img src="assets/ajax-loader.gif" alt="loading..."></div></div>
 
   </body>
 </html>

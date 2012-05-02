@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-WeightHistory::Application.load_tasks
+WeightHistory::Application.load_tasks 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120406054756) do
+ActiveRecord::Schema.define(:version => 20120419062556) do
 
   create_table "users", :force => true do |t|
     t.string   "provider"
@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(:version => 20120406054756) do
 
   create_table "weight_data", :force => true do |t|
     t.string   "uid"
-    t.string   "name"
     t.float    "weight"
     t.float    "body_fat_percentage"
+    t.date     "data_date"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
   end

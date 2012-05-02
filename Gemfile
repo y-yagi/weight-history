@@ -2,13 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.0' 
 
-gem 'linecache19', '0.5.13', :path => "~/.rvm/gems/ruby-1.9.3-p125/gems/linecache19-0.5.13/"
-gem 'ruby-debug-base19', '0.11.26', :path => "~/.rvm/gems/ruby-1.9.3-p125/gems/ruby-debug-base19-0.11.26/" 
-gem 'ruby-debug19', :require => 'ruby-debug'
-
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+#gem 'linecache19', '0.5.13', :path => "~/.rvm/gems/ruby-1.9.3-p125/gems/linecache19-0.5.13/"
+#gem 'ruby-debug-base19', '0.11.26', :path => "~/.rvm/gems/ruby-1.9.3-p125/gems/ruby-debug-base19-0.11.26/" 
+#gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'pg'
 
@@ -29,7 +25,7 @@ gem 'jquery-rails'
 
 gem 'omniauth'
 gem 'omniauth-twitter'
-#gem 'oauth'
+gem 'twitter', '2.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -44,4 +40,6 @@ gem 'omniauth-twitter'
 
 
 gem 'execjs'
-gem 'therubyracer' 
+gem 'therubyracer'  
+
+gem 'rspec-rails', '>= 2.6.0', :group => [:development, :test]

@@ -8,9 +8,7 @@
 
     <!-- Le styles -->
     <%= stylesheet_link_tag  "bootstrap.min" %>
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+    <style> body { padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
 
@@ -58,12 +56,20 @@
     </div>
 
     <div class="container">
-
       <h1>Help</h1>
       <br />
-      <p>
-     TODO:あとで書く
-      </p> 
+      <h3>使い方</h3>
+      <br />
+      <ol>
+        <li>@weighthistoryをフォローして下さい. そのうちフォローが承認されます.気長にお待ち下さい</li>
+        <li>@weighthistoryあてにその日の体重、体脂肪率をダイレクトメッセージ(以降DM)で送って下さい. DMのフォーマットは以下の通りです.</li>
+        <pre>w:xx bfp:yy</pre>
+        <p>"w:"の後ろに体重、"bfp:"の後ろに体脂肪率を指定して下さい.なお、DMするのは体重、体脂肪率どちらかだけでもOKです.以下サンプル.<p> 
+        <pre>w:58.8 bfp:18</pre>
+        <pre>w:58.8</pre>
+        <pre>bfp:18</pre>
+        <li>本サイトのOPページからtwitterアカウントログインして下さい(DMしたアカウントでログインしてね).<br />過去DMした体重の変動がグラフで表示されます.ちなみにデータの反映に1時間位かかります.気長にお待ち下さい.</li>
+      </ol>
       <br />
     </div> <!-- /container -->
   </body>
