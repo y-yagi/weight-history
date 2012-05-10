@@ -24,97 +24,6 @@
     <!-- Le javascript -->
     <%= javascript_include_tag "application" %>  
 
-		<script type="text/javascript"> 
-	$.get('/history/data.json?callback=?', function(data) {
-		// Create the chart  
-    Highcharts.setOptions({
-      global: {
-        useUTC: false
-      }
-    }); 
-		window.chart = new Highcharts.Chart({
-			chart : {
-				renderTo : 'graph-weight'
-			},
-
-			rangeSelector : {
-				selected : 1
-			}, 
-
-			title : {
-				text : 'weight history'
-			}, 
-
-      xAxis: {
-        type: 'datetime', 
-        dateTimeLabelFormats: {
-        	day: '%m-%d',
-	        week: '%m-%d'
-        },
-			  title: {
-				  text: 'date'
-        }
-      }, 
-		  yAxis: {
-			  title: {
-				  text: 'weight'
-        }
-			},   
-      tooltip: {
-          xDateFormat: '%Y-%m-%d',
-          shared: true,
-					yDecimals: 2
-      },
-
-			series : [{
-				name : 'weight data',
-				data : data["weight"]
-			}]
-		}); 
-
-		window.chart = new Highcharts.Chart({
-			chart : {
-				renderTo : 'graph-body-fat'
-			},
-
-			rangeSelector : {
-				selected : 1
-			}, 
-
-			title : {
-				text : 'body fat percentage history'
-			}, 
-
-      xAxis: {
-        type: 'datetime', 
-        dateTimeLabelFormats: {
-        	day: '%m-%d',
-	        week: '%m-%d'
-        },
-			  title: {
-				  text: 'date'
-        }
-      }, 
-		  yAxis: {
-			  title: {
-				  text: 'body fat percentage'
-        }
-			},   
-      tooltip: {
-          xDateFormat: '%Y-%m-%d',
-          shared: true,
-					yDecimals: 2
-      },
-
-			series : [{
-				name : 'body fat percentage data',
-				data : data['body_fat_percentage']
-			}]
-		});
-	});
-
-		</script>
-
     <!-- Le fav and touch icons --> 
 
     <%= csrf_meta_tags %>
@@ -134,10 +43,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Weight History</a>
+          <a class="brand" href="/">Weight History</a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="/">Home</a></li>
               <li><a href="/help">Help</a></li> 
               <% if logged_in? %>
                 <li><a href="/logout">logout</a></li> 
