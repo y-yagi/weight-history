@@ -41,7 +41,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: weight-history
+  database: weight-history_test
   pool: 5
   username: weight-history
   password:
